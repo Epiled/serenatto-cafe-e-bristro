@@ -1,5 +1,7 @@
 .logo{
-    width: 500px;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
 }
 
 body{
@@ -38,7 +40,6 @@ h2{
     color: #FFF;
     font-weight: bold;
 }
-
 
 .container-cafe-manha, .container-almoco{
     display: flex;
@@ -88,7 +89,7 @@ h2{
 }
 
 .container-produto p:nth-child(4){
-    color: #9B8357;
+    color: #B49F79;
     font-size: 18px;
     font-weight: 600;
 }
@@ -100,5 +101,6 @@ h2{
 
 .ornaments{
     width: 200px;
+    height: 100%;
 }
 

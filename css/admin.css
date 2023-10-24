@@ -4,10 +4,13 @@
     align-items: center;
     flex-direction: column;
     margin: 80px 0px 20px;
+    padding: 0 20px;
 }
 
 .logo-admin{
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
 }
 
 h2{
@@ -89,7 +92,6 @@ table tbody tr td a, .botao-cadastrar, .botao-excluir{
     font-size: 18px;
 }
 
-
 table tbody tr td a:hover, .botao-cadastrar:hover, .botao-excluir:hover{
     cursor: pointer;
     filter: saturate(150%);
@@ -106,9 +108,8 @@ table tbody tr td a:hover, .botao-cadastrar:hover, .botao-excluir:hover{
     border: none;
 }
 
-
 .botao-editar{
-    background: #9B8357;
+    background: #866F4B;
 }
 
 .botao-excluir{

@@ -9,6 +9,7 @@ form{
 .container-form{
     display: flex;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .container-radio{
@@ -33,7 +34,7 @@ form input{
 }
 
 form input[type='file']{
-    color: #FFFFFF;
+    color: #ffffff00;
 }
 
 form input::file-selector-button{
@@ -42,8 +43,24 @@ form input::file-selector-button{
     border: none;
 }
 
-
 form input:focus{
     border: 3px solid #EBC181;
     outline: none;
+}
+
+.form__imagem {
+    position: relative;
+}
+
+#file-selected {
+    position: absolute;
+    left: 130px;
+    top: calc(50% - 5px);
+    transform: translateY(calc(-50%));
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#imagem.form__cadastrar {
+    color: #ffffff;
 }

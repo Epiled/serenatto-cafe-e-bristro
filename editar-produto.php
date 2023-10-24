@@ -15,16 +15,19 @@ if (isset($_POST['editar'])) {
     $_POST['preco']
   );
 
-  if (isset($_FILES['imagem']['error']) == UPLOAD_ERR_OK) {
+  if (empty($_FILES['imagem']['tmp_name'])) {
+    $produto->setImagem($_POST['imagem-original']);
+  } else {
     $produto->setImagem(uniqid() . $_FILES['imagem']['name']);
-    move_uploaded_file($_FILES['imagem']['tmp_name'], $produto->getImagemDiretorio());
+    move_uploaded_file($_FILES['imagem']['tmp_name'], 
+    $produto->getImagemDiretorio());
   }
 
   $produtosRepositorios->atualizar($produto);
 
   header('Location: admin.php');
 } else {
-  $produto = $produtosRepositorios->buscarProduto($_GET['id']);
+  $produto = $produtosRepositorios->buscar($_GET['id']);
 }
 
 ?>
@@ -34,8 +37,9 @@ if (isset($_POST['editar'])) {
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Página de edição de produto">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/admin.css">
@@ -43,17 +47,17 @@ if (isset($_POST['editar'])) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="img/icone-serenatto.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet preload prefetch" as="style" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet preload prefetch" as="style" type="text/css">
   <title>Serenatto - Editar Produto</title>
 </head>
 
 <body>
   <main>
     <section class="container-admin-banner">
-      <img src="img/logo-serenatto-horizontal.png" class="logo-admin" alt="logo-serenatto">
+      <img src="img/logo-serenatto-horizontal.png" class="logo-admin" width="1035" height="281" alt="logo-serenatto">
       <h1>Editar Produto</h1>
-      <img class="ornaments" src="img/ornaments-coffee.png" alt="ornaments">
+      <img class="ornaments" src="img/ornaments-coffee.png" width="3061" height="392" alt="ornaments">
     </section>
     <section class="container-form">
       <form method="post" enctype="multipart/form-data">
@@ -76,10 +80,14 @@ if (isset($_POST['editar'])) {
         <input type="text" id="descricao" name="descricao" placeholder="Digite uma descrição" value="<?= $produto->getDescricao() ?>" required>
 
         <label for="preco">Preço</label>
-        <input type="text" id="preco" name="preco" placeholder="Digite uma descrição" value="<?= number_format($produto->getPreco(), 2) ?>" required>
+        <input type="text" id="preco" name="preco" placeholder="Digite uma preço" value="<?= number_format($produto->getPreco(), 2) ?>" required>
 
         <label for="imagem">Envie uma imagem do produto</label>
-        <input type="file" name="imagem" accept="image/*" id="imagem" placeholder="Envie uma imagem">
+        <div class="form__imagem">
+          <input type="file" name="imagem" accept="image/*" id="imagem" class="imagem-editar" placeholder="Envie uma imagem" >
+          <span id="file-selected"><?= $produto->getImagem() ?></span>
+        </div>
+        <input type="hidden" name="imagem-original" value="<?= $produto->getImagem() ?>" />
         <input type="hidden" name="id" value="<?= $produto->getId() ?>" />
         <input type="submit" name="editar" class="botao-cadastrar" value="Editar produto" />
       </form>
@@ -88,7 +96,8 @@ if (isset($_POST['editar'])) {
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js" integrity="sha512-Rdk63VC+1UYzGSgd3u2iadi0joUrcwX0IWp2rTh6KXFoAmgOjRS99Vynz1lJPT8dLjvo6JZOqpAHJyfCEZ5KoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/index.js"></script>
+  <script async src="js/index.js"></script>
+  <script async src="js/updateFileName.js"></script>
 </body>
 
 </html>
