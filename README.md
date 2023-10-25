@@ -1,4 +1,4 @@
-# Serenatto Café e Bristrô
+# ☕ Serenatto Café e Bristrô
 
   Projeto final do curso <a target="_blank" href="https://cursos.alura.com.br/course/javascript-validando-formularios">PHP e MySQL: criando sua primeira aplicação web</a>
   curso ministrado pelo instrutor
@@ -12,7 +12,7 @@
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![serenatto-cafe-e-bistro](https://github.com/Epiled/PHP-e-MySQL-criando-sua-primeira-aplica--o-web/assets/55258483/796093d5-4f96-4924-8909-3ffa2aba8a2d#vitrinedev)
 
-## Detalhes do projeto
+<h2 id="detalhes-do-projeto"> 📃 Detalhes do projeto </h2>
 
 Nesse projeto foi desenvolvido um site com todo um sistema de CRUD em PHP e MySQL, permitindo que a 
 empresa e seus colaboradores administrem e alterem seus produtos, todo o sistema foi construido seguindo o 
@@ -22,12 +22,12 @@ Também foi implemmentado a opção de emitir relatorio para que os colaboradore
 forma clara e direta todos os produtos e suas caractristicas, esta opção foi implementa consumindo o pacote Dompdf
 direto do Packagist.
 
-![Badge](https://img.shields.io/github/last-commit/Epiled/monibank?style=for-the-badge)
-![Badge](https://img.shields.io/github/languages/code-size/Epiled/monibank?style=for-the-badge)
-![Badge](https://img.shields.io/github/languages/count/Epiled/monibank?style=for-the-badge)
+![Badge](https://img.shields.io/github/last-commit/Epiled/serenatto-cafe-e-bristro?style=for-the-badge)
+![Badge](https://img.shields.io/github/languages/code-size/Epiled/serenatto-cafe-e-bristro?style=for-the-badge)
+![Badge](https://img.shields.io/github/languages/count/Epiled/serenatto-cafe-e-bristro?style=for-the-badge)
 ![Bagde](https://img.shields.io/badge/repo%20status-Beta-cyan?style=for-the-badge)
-![Bagde](https://img.shields.io/github/v/release/Epiled/monibank?style=for-the-badge)
-![Bagde](https://img.shields.io/github/license/Epiled/monibank?style=for-the-badge)
+![Bagde](https://img.shields.io/github/v/release/Epiled/serenatto-cafe-e-bristro?style=for-the-badge)
+![Bagde](https://img.shields.io/github/license/Epiled/serenatto-cafe-e-bristro?style=for-the-badge)
 
 ![Badge](https://img.shields.io/badge/-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![Badge](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -40,12 +40,18 @@ direto do Packagist.
 <h2> 📑 Tabela de Conteúdos </h2>
 
 <!--ts-->
-   * [Sobre](#sobre)
+   * [Detalhes do projeto](#detalhes-do-projeto)
    * [Topicos Desenvolvidos](#topicos-curso)
    * [Demonstração](#demonstracao)
+     - [Home](#home)
+     - [Login](#login)
+     - [Dashboard](#dashboard)
+     - [Cadastrar Produto](#cadastrar-produto)
+     - [Editar Produto](#editar-produto)
+     - [Apagar Produto](#apagar-produto)
+     - [Relatório](#relatorio)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
-      * [Arquivos Locais](#arquivos_locais)
    * [Tecnologias](#tecnologias)
    * [Autor](#autor)
 <!--te-->
@@ -72,7 +78,6 @@ https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/ab5add5a-5afb
 
 ![Captura de Tela (144)](https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/43325901-0e32-4578-bd1b-8398de14ed30)
 
-
 <h3 id="dashboard"> Dashboard </h3>
 
 ![Captura de Tela (145)](https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/a53ce74b-d2c5-44c8-8f45-ec508d80dddc)
@@ -85,26 +90,35 @@ https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/f81ced9f-0fcf
 
 https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/69c6262c-6d7f-433d-bc0a-72692a9d4948
 
-<h3 id="editar-produto"> Apagar Produto </h3>
+<h3 id="apagar-produto"> Apagar Produto </h3>
 
 https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/a78a65af-f6dd-4cb3-bea7-a9d44a799c39
 
 <h3 id="relatorio"> Relatório </h3>
 
+https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/20c8caf9-645d-4ea5-b34e-c39350b8e012
+
+<h2 id="instalacao"> 🚨 Pré-requisito </h2>
+<ul>
+  <li>PHP 8.2 ou superior</li>
+  <li>Composer</li>
+</ul>
 
 <h2 id="instalacao"> ⚙ Instalação </h2>
 
 ```
-1. git clone https://github.com/Epiled/monibank.git
-2. cd monibank
+1. git clone https://github.com/Epiled/serenatto-cafe-e-bristro.git
+2. cd serenatto-cafe-e-bristro
+3. composer install
 ```
 
 <h2 id="como-usar"> 👩‍🏫 Como usar </h2>
 
-<h3 id="arquivos_locais">Arquivos Locais</h3>
-<p>Nesse ponto o projeto já pode ser executado no navegador através do arquivo "index.html" executando o live server nele.</p>
-
-<p>Após isso acesse a URL "http://localhost:5500/monibank-main/pages/abrir-conta-form.html" para testra o formulário.</p>
+```
+1. Estando dentro do diretório do serenatto-cafe-e-bristro
+2. php -S localhoset:8000
+3. Acesse a url localhoset:8000 em navegador de sua preferência
+```
 
 <h2 id="tecnologias"> 🛠 Tecnologias </h2>
 
