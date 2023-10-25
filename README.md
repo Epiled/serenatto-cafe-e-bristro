@@ -62,7 +62,35 @@ direto do Packagist.
 
 <h2 id="demonstracao"> 👀 Demonstração </h2>
 
-![monibank_desktop](https://github.com/Epiled/monibank/assets/55258483/08fad58a-78ba-4dd4-9b89-915cf47bbea4)
+<h3 id="home"> Home </h3>
+
+https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/c1d73941-cd0b-4a1c-bd71-d300437175ff
+
+https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/ab5add5a-5afb-451c-8669-c19a332ed799
+
+<h3 id="login"> Login </h3>
+
+![Captura de Tela (144)](https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/43325901-0e32-4578-bd1b-8398de14ed30)
+
+
+<h3 id="dashboard"> Dashboard </h3>
+
+![Captura de Tela (145)](https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/a53ce74b-d2c5-44c8-8f45-ec508d80dddc)
+
+<h3 id="cadastrar-produto"> Cadastrar Produto </h3>
+
+https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/f81ced9f-0fcf-480f-8195-9c7f77e897c6
+
+<h3 id="editar-produto"> Editar Produto </h3>
+
+https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/69c6262c-6d7f-433d-bc0a-72692a9d4948
+
+<h3 id="editar-produto"> Apagar Produto </h3>
+
+https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/a78a65af-f6dd-4cb3-bea7-a9d44a799c39
+
+<h3 id="relatorio"> Relatório </h3>
+
 
 <h2 id="instalacao"> ⚙ Instalação </h2>
 
