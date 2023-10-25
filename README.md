@@ -50,6 +50,7 @@ direto do Packagist.
      - [Editar Produto](#editar-produto)
      - [Apagar Produto](#apagar-produto)
      - [Relatório](#relatorio)
+   * [Pre-Requisito](#pre-requisito)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
    * [Tecnologias](#tecnologias)
@@ -98,11 +99,15 @@ https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/a78a65af-f6dd
 
 https://github.com/Epiled/serenatto-cafe-e-bristro/assets/55258483/20c8caf9-645d-4ea5-b34e-c39350b8e012
 
-<h2 id="instalacao"> 🚨 Pré-requisito </h2>
+<h2 id="pre-requisito"> 🚨 Pré-requisito </h2>
 <ul>
   <li>PHP 8.2 ou superior</li>
   <li>Composer</li>
+  <li>MySQL</li>
 </ul>
+
+O repositório vem acompanhando de dois arquivos SQL, um sendo a construção do banco de dados e o outro a inserção das entradas no banco
+é necessário executar esses arquivos no seu gerenciado de SQL nos recomendamos o MySQL
 
 <h2 id="instalacao"> ⚙ Instalação </h2>
 
